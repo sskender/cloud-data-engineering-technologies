@@ -1,4 +1,4 @@
-# Additional notes
+# Lab1 additional notes
 
 ## Homebrew installs
 
