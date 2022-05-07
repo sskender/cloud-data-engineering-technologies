@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tim2-af-hello-world-go
+spec:
+  selector:
+    app: tim2-af-hello-world-go
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080

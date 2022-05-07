@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tim2-af-hello-world-go
+spec:
+  selector:
+    matchLabels:
+      app: tim2-af-hello-world-go
+  template:
+    metadata:
+      labels:
+        app: tim2-af-hello-world-go
+    spec:
+      containers:
+        - image: tim2acrferlab.azurecr.io/tim2-af-hello-world-go:latest
+          name: tim2-af-hello-world-go
+          resources:
+            limits:
+              cpu: 250m
+              memory: 128Mi
+          ports:
+            - containerPort: 8080
