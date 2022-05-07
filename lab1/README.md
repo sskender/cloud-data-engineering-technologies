@@ -13,7 +13,7 @@ brew install azure-cli
 
 ### Python
 
-Open folder `lab1/tim2-af-hello-world-py` in VS Code.
+Open folder [`tim2-af-hello-world-py`](./tim2-af-hello-world-py) in VS Code.
 
 Run function locally:
 
@@ -23,7 +23,7 @@ func start
 
 ### GoLang
 
-Open folder `lab1/tim2-af-hello-world-go`  in VS Code.
+Open folder [`tim2-af-hello-world-go`](./tim2-af-hello-world-go)  in VS Code.
 
 Run function locally:
 
