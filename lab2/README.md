@@ -20,7 +20,12 @@ go get "github.com/Azure/azure-sdk-for-go/sdk/keyvault/azsecrets"
 
 ### Run Go program
 
+Key Vault name: `kv-tim2-azv-ferlab` \
+Secret name: `sa-key1`
+
 ```bash
+export KEY_VAULT_NAME=kv-tim2-azv-ferlab
+export SECRET_NAME=sa-key1
 go run main.go
 ```
 

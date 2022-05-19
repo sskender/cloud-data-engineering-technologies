@@ -4,14 +4,15 @@ import (
     "context"
     "fmt"
     "log"
+    "os"
     "github.com/Azure/azure-sdk-for-go/sdk/azidentity"
     "github.com/Azure/azure-sdk-for-go/sdk/keyvault/azsecrets"
 )
 
 func vaultInfo() {
-	keyVaultName := "kv-tim2-azv-ferlab"
+	keyVaultName := os.Getenv("KEY_VAULT_NAME")
 	keyVaultUrl := fmt.Sprintf("https://%s.vault.azure.net/", keyVaultName)
-	secretName := "sa-key1"
+	secretName := os.Getenv("SECRET_NAME")
 
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -28,7 +29,7 @@ func vaultInfo() {
 	  log.Fatalf("failed to get the secret: %v", err)
 	}
 
-	fmt.Printf("secretValue: %s\n", *getResp.Value)
+	fmt.Printf("Secret value: %s\n", *getResp.Value)
 }
 
 func main() {
