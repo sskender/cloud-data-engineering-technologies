@@ -126,7 +126,7 @@ func receiveAllOrders(servicebus_client *azservicebus.Client, topicName string, 
 
 func main() {
 	accountName := "satim2ferlab"
-	secretKey := "apaqpTKszPAkVqdBexPcglm+8GqTdt+iYS0iFWtFYrZ2ovDBI0UPXpXU5wVSUY5E5dWxSTu1k7jGPxwH2FGgBQ==" //vaultInfo()
+	secretKey := vaultInfo()
 	containerName := "satim2ferlab"
 
 	cred, err := azblob.NewSharedKeyCredential(accountName, secretKey)
